@@ -134,9 +134,9 @@ class DummyVecEnv(VecEnv):
 
     def render(self, mode: str = "human"):
         if self.num_envs == 1:
-            return self.envs[0].render(mode=mode)
+            return self.envs[0].render()
         else:
-            return super().render(mode=mode)
+            return super().render()
 
     def get_attr(self, attr_name, indices=None):
         """Return attribute from vectorized environment (see base class)."""
